@@ -1,0 +1,31 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ .wp-block-create-block-sev-el-block {
+	//	background-color: #21759b;
+	color: #fff;
+	padding: 2px;
+	border: 15px solid rgb(232, 11, 11);
+	
+	.splide {
+		&__slide {
+			picture {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+			}
+			.description {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgb(32 117 154 / 86%);
+				padding: 20px 50px;
+			}
+		}	
+	}
+}

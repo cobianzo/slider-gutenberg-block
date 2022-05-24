@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/sev-el-block",
+	"version": "0.1.0",
+	"title": "Sev El Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Sev trying to add support, doesnt work.",
+	"supports": {
+		"html": false,
+		"spacing": {
+			"padding": true
+		},
+		"color": {
+			"background": true,
+			"text": true,
+			"gradients": true
+		}
+	},
+	"attributes": {
+		"slides_number": {
+			"type": "integer",
+			"default": 0
+		},
+		"slides_media_array": {
+			"type": "array",
+			"default": []
+		},
+		"slides_descriptions_array": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"textdomain": "sev",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"script": "file:../src/vendor/mijs.js",
+	"viewScript": "file:./vendor/mijs.js",
+	"style": ["file:./style-index.css", "file:../src/vendor/splide-4.0.2/dist/css/splide.min.css"]
+}

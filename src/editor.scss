@@ -1,0 +1,82 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-sev-el-block {
+	border: 1px dotted #f00;
+
+	// upload media box
+	.components-placeholder {
+		padding-bottom: 150px;
+	}
+
+	.slides-parent {
+		display: grid;
+		/* stylelint-disable */
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		/* stylelint-enable */
+		gap: 5px;
+
+		.slide {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			max-height: 300px;
+
+			.slide-badge {
+				position: absolute;
+				left: 10px;
+				top: 10px;
+				padding: 5px;
+				font-size: 0.6rem;
+				background-color: rgba(190, 74, 74, 0.84);
+
+				&.delete-slide {
+					left: auto;
+					right: 10px;
+					border: 3px solid red;
+					padding: 5px 8px;
+					background-color: rgba(226, 215, 215, 0.84);
+					border-radius: 10px;
+					cursor: pointer;
+					display:none;
+					&:hover {
+						background-color: rgba(208, 57, 57, 0.84);
+					}
+				}
+			}
+			.slide-descr {
+				position: absolute;	
+				bottom: 10px;
+				width: 100%;
+				padding: 10px;
+				background-color: rgb(32 117 154 / 86%);
+			}
+		}
+
+		.slide-add-button {
+			background-color: gradient(linear, left top, right top, from(rgb(131, 127, 127)), to(rgb(230, 230, 230)));
+			border: 3px dashed rgba(255,255,255,0.6);
+			button {
+				height: 100px;
+				padding: 10px 20px;
+				background:rgb(58, 87, 167);
+				color: white;
+				&:hover {
+					border-color: orange;
+				}
+			}
+		}
+	}
+}
+
+
+.slide-selected {
+	border: 10px solid orange;
+
+	.slide-badge.delete-slide {
+		display: block !important;
+	}
+}
